@@ -3,19 +3,23 @@ import java.util.Scanner;
 import java.util.ArrayList;
 public class TodoList {
     // an ArrayList that stores tasks.
-    private static final ArrayList<String> tasks= new ArrayList<>();
-    //An ArrayList that stores the status of each task,or a boolean that indicates if the task is completed.
-    private static final ArrayList<Boolean> isCompleted=new ArrayList<>();
-     public void main(String[] args){
+    private static final ArrayList<String> tasks = new ArrayList<>();
 
-        Scanner scanner= new Scanner(System.in);
-        boolean isTrue=true;
+    // An ArrayList that stores the status of each task,
+// or a boolean that indicates if the task is completed.
+    private static final ArrayList<Boolean> isCompleted = new ArrayList<>();
+
+    public void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+        boolean isTrue = true;
+
         while(isTrue){
 
             // calling printMenu method
             printMenu();
-            int choice=scanner.nextInt();
-            scanner.nextLine();// consumes new lines or an enter key
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // consumes new line to avoid buffering
 
             switch (choice){
                 case 1:
