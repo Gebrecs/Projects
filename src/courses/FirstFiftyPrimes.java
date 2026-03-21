@@ -17,10 +17,11 @@ public class FirstFiftyPrimes {
     public static int[] getFirstNPrimes(int n) {
         int[] primes = new int[n];
         int count = 0; // Count of prime numbers found so far
-        int number = 2; // The number to be tested for primality
+        int number = 2; // The number to be tested for primality, this is a start for the prime numbers
 
         while (count < n) {
             if (isPrime(number)) {
+                // sets the firs prime number to array,at index 0 and increments the count
                 primes[count] = number;
                 count++;
             }
@@ -36,10 +37,12 @@ public class FirstFiftyPrimes {
      * @return true if the number is prime, false otherwise.
      */
     public static boolean isPrime(int num) {
+        // any number below 2 is not prime
         if (num <= 1) {
             return false;
         }
         // Check for divisors from 2 up to the square root of num for efficiency.
+        // if a number is divisible by any number from 2 to the square root of num, it is not prime.
         for (int i = 2; i <= Math.sqrt(num); i++) {
             if (num % i == 0) {
                 return false;

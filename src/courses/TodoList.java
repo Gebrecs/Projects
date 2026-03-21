@@ -16,7 +16,8 @@ public class TodoList {
 
         while(isTrue){
 
-            // calling printMenu method
+            // calling printMenu method,
+            // the menu will always be printed until the user enters 5
             printMenu();
             int choice = scanner.nextInt();
             scanner.nextLine(); // consumes new line to avoid buffering
@@ -58,7 +59,7 @@ public class TodoList {
     private static void addTask(Scanner scanner){
         System.out.println("Enter a task 💪💪💪: ");
         String task = scanner.nextLine(); // accepts a task from a user
-        // adding task to the ArrayList
+        // adding a task to the ArrayList
         tasks.add(task);
         // adding a boolean value to the ArrayList
         isCompleted.add(false);
