@@ -5,9 +5,9 @@ public class spaceTravelSimulator {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        String [] astronautNames=new String[10];
-        int [] astronautAges= new int[10];
-        String [] astronautMissionStatus= new String[10];
+        String [] astronautNames = new String[10];
+        int [] astronautAges = new int[10];
+        String [] astronautMissionStatus = new String[10];
 
         int astronautCount=0;
 
@@ -42,8 +42,6 @@ public class spaceTravelSimulator {
                     break;
             }
         }
-
-
 
 
     }

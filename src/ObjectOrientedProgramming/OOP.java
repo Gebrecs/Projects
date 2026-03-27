@@ -4,22 +4,19 @@ public class OOP {
     public static void main(String[] args) {
 
         Car car = new Car();
-        car.color = "red";
-        car.year = 2030;
-        car.model = "BMW";
+        // method chaining
 
-        // calling the method using the object
-        car.showDetails();
+        car.setColor("Black")
+           .setYear(2005)
+           .setModel("BMW")
+           .showDetails();
 
-        Car car2 = new Car();
-        car2.color = "blue";
-        car2.year = 2040;
-        car2.model = "Mercedes";
-
-        // calling the method using the object for the second car
-        car2.showDetails();
-
-
-
+        Car newCar = new Car();
+        newCar.setColor("Red")
+                .setModel("Toyota")
+                .setYear(2010)
+                .showDetails();
     }
 }
+
+
