@@ -16,6 +16,13 @@ public class OOP {
                 .setModel("Toyota")
                 .setYear(2010)
                 .showDetails();
+
+        // creating an instance for the smartPhone class
+
+        SmartPhone phone=new SmartPhone("Samsung","A23",1600);
+        SmartPhone apple=new SmartPhone("Apple","iPhone 14",1200);
+        // method chaining
+        phone.applyDiscount(-10).comparePrice(apple).showDetails();
     }
 }
 
