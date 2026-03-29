@@ -7,8 +7,8 @@ public class Dice {
 
     // constructor to initialize the value
 
-    public  Dice(int value) {
-        this.value = value;
+    public  Dice() {
+        this.value = 1;
     }
 
     // method to roll dice

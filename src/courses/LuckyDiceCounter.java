@@ -7,33 +7,41 @@ public class LuckyDiceCounter {
 
         char playAgain;
         do {
-            System.out.println("Welcome to the lucky game");
-            System.out.println("enter the target to win the game");
-            int target = scanner.nextInt();
+            System.out.println("🎲 Welcome to Lucky Dice Adventure!");
+            int target;
+            do {
+                System.out.print("Enter the target score to win: ");
+                target = scanner.nextInt();
+
+                if (target <= 0) {
+                    System.out.println("Please enter a number greater than 0.");
+                }
+            } while (target <= 0);
             Game game = new Game(target);
 
             boolean playing = true;
             while (playing) {
                 System.out.println("press 'r' to roll or press 's' to stop the game");
                 char choice = scanner.next().charAt(0);
-                if (choice == 'r') {
+                if (choice == 'r'|| choice=='R') {
                     game.rollDice();
                     game.showCurrentScore();
                     if (game.isTargetReached()) {
-                        System.out.println("Congrats on your victory 🎉🎉🎉👏㊗️🎊,You win!");
-                        playing = false;
+                        System.out.println("🏆 You reached the target! You win!");
+                        break;
                     }
-                } else if (choice == 's') {
+                } else if (choice == 's'||choice=='S') {
                     System.out.println("You choose to stop the game with final score ");
-                    game.rollDice();
                     game.showCurrentScore();
-                    playing = false;
+                    break;
+                }else {
+                    System.out.println("Invalid choice. Please enter 'r' or 's'.");
                 }
             }
             // ask the user if they want to play again
             System.out.println("Do you want to play again? (y/n)");
-            playAgain = scanner.next().charAt(0);
-        }while (playAgain == 'y' || playAgain == 'Y');
+            playAgain = Character.toLowerCase(scanner.next().charAt(0));
+        }while (playAgain =='y');
         System.out.println("Thank you for playing!");
         scanner.close();
     }

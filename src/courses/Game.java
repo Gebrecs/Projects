@@ -5,10 +5,10 @@ public class Game {
     private Dice dice1;
     private Dice dice2;
     private int score;
-    private final int target;
+    private int target;
     public Game(int target) {
-        this.dice1 = new Dice(1);
-        this.dice2 = new Dice(2);
+        this.dice1 = new Dice();
+        this.dice2 = new Dice();
         this.score = 0;
         this.target = target;
 
@@ -21,11 +21,11 @@ public class Game {
         dice2.roll();
         System.out.println("Dice one: " + dice1.getValue());
         System.out.println("Dice two: " + dice2.getValue());
-        this.score =+ dice1.getValue()+ dice2.getValue();
+        this.score += dice1.getValue()+ dice2.getValue();
 
         if(dice1.getValue() == dice2.getValue()){
             System.out.println("You rolled the two dice with same value so , bonus(10)💥💥💥 is awarded to you!");
-            this.score = score+10;
+            this.score+=10;
         }
     }
 
@@ -37,7 +37,8 @@ public class Game {
     }
 
     public boolean isTargetReached(){
-        return this.target >= this.score;
+
+        return this.score >= this.target;
     }
 
 
