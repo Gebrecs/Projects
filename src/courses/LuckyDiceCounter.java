@@ -19,8 +19,7 @@ public class LuckyDiceCounter {
             } while (target <= 0);
             Game game = new Game(target);
 
-            boolean playing = true;
-            while (playing) {
+            while (true) {
                 System.out.println("press 'r' to roll or press 's' to stop the game");
                 char choice = scanner.next().charAt(0);
                 if (choice == 'r'|| choice=='R') {

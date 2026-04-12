@@ -1,15 +1,11 @@
 
 import java.util.Scanner;
-
 public class Stack{
     public static void main(String[] args){
-
         Stack stack= new Stack();
         System.out.println(stack.breadMaking(100));
         stackExample();
         stackExample2();
-
-
     }
     public static void stackExample(){
         Scanner scanner = new Scanner(System.in);
@@ -24,7 +20,6 @@ public class Stack{
         int b=scanner.nextInt();
         System.out.println("the power of the two numbers is = " + Math.pow(a,b));
     }
-
     public String breadMaking(int input) {
         if (input <= 0) {
             return "Invalid input";

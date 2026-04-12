@@ -45,7 +45,7 @@ public class EmailValidator {
 
         // 5. Check that the username (before '@') does not start or end with '.'
         String username = email.substring(0, atIndex);
-        if (username.startsWith(".") || username.endsWith(".")) {
+        if (username.startsWith(".") || username.endsWith("@")) {
             return false;
         }
 
@@ -80,7 +80,7 @@ public class EmailValidator {
                this represents the username part before '@'
                example: "user"
 
-    @            → the email must contain exactly one '@' symbol
+    @            → the email must contain exactly one    '@' symbol
 
     [^\\s@]+ one or more characters that are NOT:
                 - whitespace
