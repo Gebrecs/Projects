@@ -13,9 +13,7 @@ public class EvenAndOddSum {
             sumArr[i]=scanner.nextInt();
         }
         for(int i=0;i<num;i++){
-            if(sumArr[i]%2<0){
-                System.out.println("you enter:" +sumArr[i]+ "and it is negative number" );
-            }
+
             if(sumArr[i]%2==0){
                 sumEven+=sumArr[i];
             }
